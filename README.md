@@ -1,40 +1,43 @@
-# PersonnaTracker
-Usage 
-		# Search social media profiles
-python personatracker.py -u username123 -o results.json
+# PersonaTracker - OSINT Digital Footprint Analyzer
 
-# Check email breaches
-python personatracker.py -e user@example.com
+PersonaTracker is a Python-based tool designed for gathering information about social media accounts and checking for email breaches. It utilizes various APIs to provide insights into a user's digital footprint.
 
-# Perform Google search
-python personatracker.py -g "John Doe site:linkedin.com"
+## Features
 
-# Combine options
-python personatracker.py -u username123 -e user@example.com -o combined.json
+- **Search Social Media**: Look up usernames on Twitter and Reddit.
+- **Email Breach Check**: Check if an email has been involved in any data breaches using the Have I Been Pwned API.
+- **Google Search**: Perform a Google search to find digital footprints.
+- **Instagram Profile Scraping**: Scrape Instagram profiles for public information (note: scraping may violate Instagram's terms of service).
+- **Results Output**: Save results to a JSON file or print them to the console.
 
-To Make It Work:
+## Requirements
 
-    Register for API keys:
-        Twitter Developer Account
-        Google Custom Search JSON API
-        HaveIBeenPwned API
-        Reddit API
+- Python 3.x
+- Required Python packages:
+  - `requests`
+  - `json`
+  - `argparse`
+  - `beautifulsoup4`
+  - `tweepy`
+  - `praw`
 
-    Replace placeholder API keys in the code with your actual credentials
+You can install the required packages using pip:
 
-Limitations and Ethical Considerations:
+```bash
+pip install requests beautifulsoup4 tweepy praw
 
-    Respect platform API rate limits
-    Comply with websites' robots.txt rules
-    Only use for legitimate ethical purposes
-    Some platforms may require additional permissions
+Setup
 
-Possible Expansions:
-
-    Add more platforms (Facebook, LinkedIn, GitHub)
-    Implement web scraping protection bypass
-    Add geolocation lookup
-    Create visualization dashboard
-    Add machine learning for pattern recognition
-
-This implementation provides a foundation that you can extend with additional modules for specific platforms or data sources. Always ensure compliance with legal requirements and platform terms of service when using OSINT tools.
+    Clone the Repository:
+		git clone https://github.com/yourusername/PersonaTracker.git
+		cd PersonaTracker
+Set Up Environment Variables: Create a .env file in the root directory of the project or set the environment variables in your system. The following variables are required:
+TWITTER_API_KEY=your_twitter_api_key
+TWITTER_API_SECRET=your_twitter_api_secret
+TWITTER_ACCESS_TOKEN=your_twitter_access_token
+TWITTER_ACCESS_TOKEN_SECRET=your_twitter_access_token_secret
+REDDIT_CLIENT_ID=your_reddit_client_id
+REDDIT_CLIENT_SECRET=your_reddit_client_secret
+HIBP_API_KEY=your_haveibeenpwned_api_key
+GOOGLE_API_KEY=your_google_api_key
+SEARCH_ENGINE_ID=your_google_search_engine_id
