@@ -41,3 +41,25 @@ REDDIT_CLIENT_SECRET=your_reddit_client_secret
 HIBP_API_KEY=your_haveibeenpwned_api_key
 GOOGLE_API_KEY=your_google_api_key
 SEARCH_ENGINE_ID=your_google_search_engine_id
+
+
+Obtain API Keys:
+
+    Twitter: Create a Twitter Developer account and generate API keys.
+    Reddit: Create a Reddit app to get your client ID and secret.
+    Have I Been Pwned: Sign up for an API key.
+    Google Custom Search: Set up a Google Cloud project and enable the Custom Search API.
+
+Usage
+
+Run the script from the command line with the following options:
+python persona_tracker.py -u <username> -e <email> -g <query> -o <output_file>
+Options:
+
+    -u, --username: Search social media by username.
+    -e, --email: Check email in public databases for breaches.
+    -g, --google: Perform a Google search for digital footprints.
+    -o, --output: Specify the output file name to save results in JSON format.
+
+Example:
+python persona_tracker.py -u example_username -e example@example.com -g "example query" -o results.json
